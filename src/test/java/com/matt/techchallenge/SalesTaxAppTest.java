@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class SalesTaxAppTest
 {
-    private ShoppingBasket basket;
+    private SalesTaxCalculator basket;
 
     @Test
     public void testInput1EqualsOutput1() {
@@ -36,7 +36,7 @@ public class SalesTaxAppTest
     }
 
     private void WhenIHaveAnEmptyShoppingBasket() {
-        basket = new ShoppingBasket.ShoppingBasketBuilder(new ArrayList<SaleItem>()).build();
+        basket = new SalesTaxCalculator.SalesTaxCalculatorBuilder(new ArrayList<SaleItem>()).build();
     }
 
     private void AndIBuyABook(double price) {

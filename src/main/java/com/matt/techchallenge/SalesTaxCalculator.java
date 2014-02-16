@@ -3,13 +3,15 @@ package com.matt.techchallenge;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class ShoppingBasket {
+public class SalesTaxCalculator {
+    private final int salesTaxRate;
+    private final int importedTaxRate;
     private final ArrayList<SaleItem> items;
-    private final int salesTaxRate = 10;
-    private final int importedTaxRate = 5;
     private final DecimalFormat df = new DecimalFormat("0.00");
 
-    private ShoppingBasket(ShoppingBasketBuilder builder) {
+    private SalesTaxCalculator(SalesTaxCalculatorBuilder builder) {
+        this.salesTaxRate = builder.salesTaxRate;
+        this.importedTaxRate = builder.importTaxRate;
         this.items = builder.items;
     }
 
@@ -30,7 +32,7 @@ public class ShoppingBasket {
         }
     }
 
-    private double calculateSalesTax(SaleItem item) {
+    private double calculateSalesTaxForItem(SaleItem item) {
         double salesTax = 0;
         if (!item.isSalesTaxExempt()) {
             salesTax += roundUp(item.getPrice() * (double)salesTaxRate/100, 0.05);
@@ -46,7 +48,7 @@ public class ShoppingBasket {
         double salesTaxTotal = 0;
         double total = 0;
         for (SaleItem item : items) {
-            double itemSalesTax = calculateSalesTax(item);
+            double itemSalesTax = calculateSalesTaxForItem(item);
             double itemPriceIncSalesTax = item.getPrice() + itemSalesTax;
             salesTaxTotal += itemSalesTax;
             total += itemPriceIncSalesTax;
@@ -61,16 +63,27 @@ public class ShoppingBasket {
         return Math.ceil(number * multiplier) / multiplier;
     }
 
-    //Builder Class
-    public static class ShoppingBasketBuilder{
+    public static class SalesTaxCalculatorBuilder {
+        private int salesTaxRate = 10;
+        private int importTaxRate = 5;
         private ArrayList<SaleItem> items;
 
-        public ShoppingBasketBuilder(ArrayList<SaleItem> items) {
+        public SalesTaxCalculatorBuilder(ArrayList<SaleItem> items) {
             this.items = items;
         }
 
-        public ShoppingBasket build() {
-            return new ShoppingBasket(this);
+        public SalesTaxCalculatorBuilder salesTaxRate(int salesTaxRate) {
+            this.salesTaxRate = salesTaxRate;
+            return this;
+        }
+
+        public SalesTaxCalculatorBuilder importTaxRate(int importTaxRate) {
+            this.importTaxRate = importTaxRate;
+            return this;
+        }
+
+        public SalesTaxCalculator build() {
+            return new SalesTaxCalculator(this);
         }
     }
 }
