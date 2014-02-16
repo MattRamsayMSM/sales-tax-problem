@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ShoppingBasket {
     private final ArrayList<SaleItem> items;
     private final int salesTaxRate = 10;
-    private final DecimalFormat df = new DecimalFormat("#.00");
+    private final DecimalFormat df = new DecimalFormat("0.00");
 
     private ShoppingBasket(ShoppingBasketBuilder builder) {
         this.items = builder.items;
@@ -27,23 +27,26 @@ public class ShoppingBasket {
         }
     }
 
-    private double calculateSalesTax() {
-        double salesTaxTotal = 0;
-        for(SaleItem item : items) {
-            if (!item.isSalesTaxExempt()) {
-                System.out.println(item.getPrice());
-                salesTaxTotal += roundUp(item.getPrice() * (double)salesTaxRate/100, 0.05);
-            }
+    private double calculateSalesTax(SaleItem item) {
+        double salesTax = 0;
+        if (!item.isSalesTaxExempt()) {
+            salesTax += roundUp(item.getPrice() * (double)salesTaxRate/100, 0.05);
         }
-        return salesTaxTotal;
+        return salesTax;
     }
 
     public String printReceipt() {
         String receipt = new String();
+        double salesTaxTotal = 0;
+        double total = 0;
         for (SaleItem item : items) {
-            receipt += "1 " + item.toString() + " ";
+            double itemSalesTax = calculateSalesTax(item);
+            double itemPriceIncSalesTax = item.getPrice() + itemSalesTax;
+            salesTaxTotal += itemSalesTax;
+            total += itemPriceIncSalesTax;
+            receipt += "1 " + item.getName() + ": " +  df.format(itemPriceIncSalesTax) + " ";
         }
-        receipt += "Sales Taxes: " + df.format(calculateSalesTax());
+        receipt += "Sales Taxes: " + df.format(salesTaxTotal) + " Total: " + df.format(total);
         return receipt;
     }
 

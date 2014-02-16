@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50c099d-366d-44cc-8179-938c99a4f0ee" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Matt\IdeaProjects\sales-tax-problem\.idea\libraries\Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Matt\IdeaProjects\sales-tax-problem\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Matt\IdeaProjects\sales-tax-problem\sales-tax-problem.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/matt/techchallenge/SalesTaxAppTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/matt/techchallenge/SalesTaxAppTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/ShoppingBasket.java" afterPath="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/ShoppingBasket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sales-tax-problem.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392571779646" ignored="false" />
+    <file path="/fragment.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392574679681" ignored="false" />
     <file path="/SalesTaxAppTest.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392568732119" ignored="false" />
     <file path="/Item.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1391730949170" ignored="false" />
     <file path="/ItemBuilder.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1391730991057" ignored="false" />
@@ -26,10 +18,10 @@
     <file path="/SaleItemDirector.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1391732831000" ignored="false" />
     <file path="/BookSaleItem.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1391732943112" ignored="false" />
     <file path="/BookSaleItemBuilder.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1391733084199" ignored="false" />
-    <file path="/ShoppingBasket.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392573110675" ignored="false" />
+    <file path="/ShoppingBasket.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392575019577" ignored="false" />
     <file path="/TaxableSaleItem.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392244577889" ignored="false" />
     <file path="/SaleItemType.java" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392554947549" ignored="false" />
-    <file path="/Dummy.txt" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392572074575" ignored="false" />
+    <file path="/Dummy.txt" changelist="a50c099d-366d-44cc-8179-938c99a4f0ee" time="1392574679681" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +121,7 @@
       <file leaf-file-name="ShoppingBasket.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/ShoppingBasket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="60" selection-start="270" selection-end="270" vertical-scroll-proportion="0.34170854">
+            <state line="18" column="36" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40452263">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +132,7 @@
       <file leaf-file-name="SaleItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="25" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,8 +189,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/TaxableSaleItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItemType.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/matt/techchallenge/SalesTaxAppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/matt/techchallenge/ShoppingBasket.java" />
       </list>
     </option>
@@ -341,7 +333,29 @@
       <recent name="com.matt.techchallenge" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.sales-tax-test">
+  <component name="RunManager" selected="JUnit.SalesTaxAppTest">
+    <configuration default="false" name="SalesTaxAppTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="sales-tax-problem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.matt.techchallenge" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.techchallenge.SalesTaxAppTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -453,37 +467,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="sales-tax-test" type="JUnit" factoryName="JUnit">
-      <module name="sales-tax-problem" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.matt.techchallenge" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.sales-tax-test" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SalesTaxAppTest" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SalesTaxAppTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -712,6 +703,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItemType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="51" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/matt/techchallenge/SalesTaxAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="32" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0">
@@ -721,23 +726,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="25" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/SaleItemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/matt/techchallenge/ShoppingBasket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="270" selection-end="270" vertical-scroll-proportion="0.34170854">
+        <state line="18" column="36" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40452263">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

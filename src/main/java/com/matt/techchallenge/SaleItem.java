@@ -17,19 +17,19 @@ public class SaleItem {
         return price;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public boolean isSalesTaxExempt() {
         return isSalesTaxExempt;
     }
 
-    public String toString() {
-        return name + ": " + price;
-    }
-
-    //Builder Class
     public static class SaleItemBuilder{
         private String name;
         private double price;
         private boolean isSalesTaxExempt = false;
+
         private boolean isImported = false;
 
         public SaleItemBuilder(String name, double price) {
