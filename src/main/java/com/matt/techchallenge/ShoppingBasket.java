@@ -6,23 +6,26 @@ import java.util.ArrayList;
 public class ShoppingBasket {
     private final ArrayList<SaleItem> items;
     private final int salesTaxRate = 10;
+    private final int importedTaxRate = 5;
     private final DecimalFormat df = new DecimalFormat("0.00");
 
     private ShoppingBasket(ShoppingBasketBuilder builder) {
         this.items = builder.items;
     }
 
-    public void purchase(String name, double price, SaleItemType type) {
-        //Is item taxable
+    public void purchase(String name, double price, SaleItemType type, boolean isImported) {
         switch (type) {
             case Food:
             case Book:
             case MedicalProduct:
-                items.add(new SaleItem.SaleItemBuilder(name, price).isSalesTaxExempt(true).build());
+                items.add(new SaleItem.SaleItemBuilder(name, price)
+                        .isImported(isImported)
+                        .isSalesTaxExempt(true).build());
                 break;
             case MusicCD:
             case Perfume:
-                items.add(new SaleItem.SaleItemBuilder(name, price).build());
+                items.add(new SaleItem.SaleItemBuilder(name, price)
+                        .isImported(isImported).build());
                 break;
         }
     }
@@ -31,6 +34,9 @@ public class ShoppingBasket {
         double salesTax = 0;
         if (!item.isSalesTaxExempt()) {
             salesTax += roundUp(item.getPrice() * (double)salesTaxRate/100, 0.05);
+        }
+        if (item.isImported()) {
+            salesTax += roundUp(item.getPrice() * (double)importedTaxRate/100, 0.05);
         }
         return salesTax;
     }

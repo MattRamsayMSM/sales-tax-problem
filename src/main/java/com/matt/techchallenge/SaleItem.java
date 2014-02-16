@@ -18,18 +18,21 @@ public class SaleItem {
     }
 
     public String getName() {
-        return name;
+        return (isImported ? "imported " : "") + name;
     }
 
     public boolean isSalesTaxExempt() {
         return isSalesTaxExempt;
     }
 
+    public boolean isImported() {
+        return isImported;
+    }
+
     public static class SaleItemBuilder{
         private String name;
         private double price;
         private boolean isSalesTaxExempt = false;
-
         private boolean isImported = false;
 
         public SaleItemBuilder(String name, double price) {
