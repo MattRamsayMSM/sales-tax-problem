@@ -1,35 +1,14 @@
 package com.matt.techchallenge;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
+import org.junit.Test;
+import static org.junit.Assert.*;
 import java.util.ArrayList;
 
-/**
- * Unit test for simple SalesTaxApp.
- */
-public class SalesTaxAppTest extends TestCase
+public class SalesTaxAppTest
 {
     private ShoppingBasket basket;
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public SalesTaxAppTest(String testName)
-    {
-        super( testName );
-    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( SalesTaxAppTest.class );
-    }
-
+    @Test
     public void testInput1EqualsOutput1() {
         WhenIHaveAnEmptyShoppingBasket();
         AndIBuyABook();
@@ -43,22 +22,19 @@ public class SalesTaxAppTest extends TestCase
     }
 
     private void AndIBuyABook() {
-        SaleItem book = new SaleItem.SaleItemBuilder("book", 12.49).build();
-        basket.purchase(book);
+        basket.purchase("book", 12.49, SaleItemType.Book);
     }
 
     private void AndIBuyAMusicCD() {
-        SaleItem musicCd = new SaleItem.SaleItemBuilder("music CD", 14.99).build();
-        basket.purchase(musicCd);
+        basket.purchase("music CD", 14.99, SaleItemType.MusicCD);
     }
 
     private void AndIBuyAChocolateBar() {
-        SaleItem chocolateBar = new SaleItem.SaleItemBuilder("chocolate bar", 0.85).build();
-        basket.purchase(chocolateBar);
+        basket.purchase("chocolate bar", 0.85, SaleItemType.Food);
     }
 
     private void ThenReceiptShouldBeSameAsOutput1() {
-        String output1 = "1 book : 12.49 1 music CD: 16.49 1 chocolate bar: 0.85 Sales Taxes: 1.50 Total: 29.83";
+        String output1 = "1 book: 12.49 1 music CD: 16.49 1 chocolate bar: 0.85 Sales Taxes: 1.50 Total: 29.83";
         assertEquals(output1, basket.printReceipt());
     }
 }
