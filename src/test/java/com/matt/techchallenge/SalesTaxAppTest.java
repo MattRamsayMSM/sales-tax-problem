@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class SalesTaxAppTest
 {
     private ShoppingBasket shoppingBasket;
-    private SalesTaxCalculator salesTaxCalculator;
     private final int salesTaxRate = 10;
     private final int importTaxRate = 5;
 
@@ -39,7 +38,9 @@ public class SalesTaxAppTest
     }
 
     private void WhenIHaveAnEmptyShoppingBasket() {
-        shoppingBasket = new ShoppingBasket(new ArrayList<SaleItem>(), new SalesTaxCalculator(salesTaxRate, importTaxRate));
+        shoppingBasket = new ShoppingBasket(new ArrayList<SaleItem>(),
+                new SalesTaxCalculator(salesTaxRate, importTaxRate),
+                new ReceiptPrinter());
     }
 
     private void AndIBuyABook(double price) {
