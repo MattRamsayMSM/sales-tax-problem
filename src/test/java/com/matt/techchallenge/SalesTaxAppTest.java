@@ -6,7 +6,10 @@ import java.util.ArrayList;
 
 public class SalesTaxAppTest
 {
-    private SalesTaxCalculator basket;
+    private ShoppingBasket shoppingBasket;
+    private SalesTaxCalculator salesTaxCalculator;
+    private final int salesTaxRate = 10;
+    private final int importTaxRate = 5;
 
     @Test
     public void testInput1EqualsOutput1() {
@@ -36,49 +39,49 @@ public class SalesTaxAppTest
     }
 
     private void WhenIHaveAnEmptyShoppingBasket() {
-        basket = new SalesTaxCalculator.SalesTaxCalculatorBuilder(new ArrayList<SaleItem>()).build();
+        shoppingBasket = new ShoppingBasket(new ArrayList<SaleItem>(), new SalesTaxCalculator(salesTaxRate, importTaxRate));
     }
 
     private void AndIBuyABook(double price) {
-        basket.purchase("book", price, SaleItemType.Book, false);
+        shoppingBasket.purchase("book", price, SaleItemType.Book, false);
     }
 
     private void AndIBuyAMusicCD(double price) {
-        basket.purchase("music CD", price, SaleItemType.MusicCD, false);
+        shoppingBasket.purchase("music CD", price, SaleItemType.MusicCD, false);
     }
 
     private void AndIBuyAChocolateBar(double price) {
-        basket.purchase("chocolate bar", price, SaleItemType.Food, false);
+        shoppingBasket.purchase("chocolate bar", price, SaleItemType.Food, false);
     }
 
     private void AndIBuyABottleOfPerfume(double price) {
-        basket.purchase("bottle of perfume", price, SaleItemType.Perfume, false);
+        shoppingBasket.purchase("bottle of perfume", price, SaleItemType.Perfume, false);
     }
 
     private void AndIBuyAPacketOfHeadachePills(double price) {
-        basket.purchase("packet of headache pills", price, SaleItemType.MedicalProduct, false);
+        shoppingBasket.purchase("packet of headache pills", price, SaleItemType.MedicalProduct, false);
     }
 
     private void AndIBuyAnImportedBoxOfChocolates(double price) {
-        basket.purchase("box of chocolates", price, SaleItemType.Food, true);
+        shoppingBasket.purchase("box of chocolates", price, SaleItemType.Food, true);
     }
 
     private void AndIBuyAnImportedBottleOfPerfume(double price) {
-        basket.purchase("bottle of perfume", price, SaleItemType.Perfume, true);
+        shoppingBasket.purchase("bottle of perfume", price, SaleItemType.Perfume, true);
     }
 
     private void ThenReceiptShouldBeSameAsOutput1() {
         String output1 = "1 book: 12.49 1 music CD: 16.49 1 chocolate bar: 0.85 Sales Taxes: 1.50 Total: 29.83";
-        assertEquals(output1, basket.printReceipt());
+        assertEquals(output1, shoppingBasket.printReceipt());
     }
 
     private void ThenReceiptShouldBeSameAsOutput2() {
         String output2 = "1 imported box of chocolates: 10.50 1 imported bottle of perfume: 54.65 Sales Taxes: 7.65 Total: 65.15";
-        assertEquals(output2, basket.printReceipt());
+        assertEquals(output2, shoppingBasket.printReceipt());
     }
 
     private void ThenReceiptShouldBeSameAsOutput3() {
         String output3 = "1 imported bottle of perfume: 32.19 1 bottle of perfume: 20.89 1 packet of headache pills: 9.75 1 imported box of chocolates: 11.85 Sales Taxes: 6.70 Total: 74.68";
-        assertEquals(output3, basket.printReceipt());
+        assertEquals(output3, shoppingBasket.printReceipt());
     }
 }
